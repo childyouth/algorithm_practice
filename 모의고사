@@ -1,0 +1,38 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(vector<int> answers) {
+    vector<vector<int>> ABC_answer;
+    vector<int> A_answer{1,2,3,4,5};
+    vector<int> B_answer{2,1,2,3,2,4,2,5};
+    vector<int> C_answer{3,3,1,1,2,2,4,4,5,5};
+    
+    ABC_answer.push_back(A_answer);
+    ABC_answer.push_back(B_answer);
+    ABC_answer.push_back(C_answer);
+    
+    int high_score=0;
+    vector<int> answer;
+    
+    int student_id = 1;
+    for(vector<int> student_answer : ABC_answer ){
+        int correct_cnt = 0;
+        int student_size = student_answer.size();
+        for(int i = 0;i<answers.size();i++){
+            if( student_answer[i%student_size] == answers[i] ){
+                correct_cnt ++;
+            }
+        }
+        if(high_score < correct_cnt){
+            answer.clear();
+            answer.push_back(student_id);
+            high_score = correct_cnt;
+        }
+        else if(high_score == correct_cnt)
+            answer.push_back(student_id);
+        student_id ++;
+    }
+    return answer;
+}

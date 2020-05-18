@@ -1,0 +1,17 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int dfs(vector<int> numbers, int size, int index, int target, int sum){
+    if(index == size){
+        return target == sum;
+    }
+    int yangsu = dfs(numbers,size,index+1,target,sum + numbers[index]);
+    int umsu = dfs(numbers,size,index+1,target,sum - numbers[index]);
+    return yangsu + umsu;
+}
+
+int solution(vector<int> numbers, int target) {
+    return dfs(numbers,numbers.size(),0,target,0);
+}
