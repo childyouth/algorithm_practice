@@ -1,0 +1,5 @@
+﻿  close_num.cpp
+c:\users\fakei\documents\visual studio 2017\projects\algolab_c++\close_num\close_num\close_num.cpp(35): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\fakei\documents\visual studio 2017\projects\algolab_c++\close_num\close_num\close_num.cpp(36): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  close_num.vcxproj -> C:\Users\fakei\Documents\Visual Studio 2017\Projects\Algolab_C++\close_num\Debug\close_num.exe
+  close_num.vcxproj -> C:\Users\fakei\Documents\Visual Studio 2017\Projects\Algolab_C++\close_num\Debug\close_num.pdb (Partial PDB)
