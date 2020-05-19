@@ -21,3 +21,6 @@ leap_year\
 모의고사\
 타겟 넘버\
 탑
+
+## 과제
+word_count
